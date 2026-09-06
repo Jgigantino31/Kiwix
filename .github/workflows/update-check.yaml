@@ -22,7 +22,7 @@ jobs:
         id: check
         uses: lucacome/docker-image-update-checker@v3
         with:
-          base-image: ghcr.io/linuxserver/baseimage-ubuntu:noble
+          base-image: ghcr.io/linuxserver/baseimage-ubuntu:resolute
           image: ghcr.io/jgigantino31/kiwix:latest
           platforms: linux/amd64,linux/arm64
       - name: Invoke build workflow
