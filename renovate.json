@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "docker:enableMajor",
+    ":semanticCommits"
+  ],
+  "packageRules": [
+    {
+      "description": "Automerge Updates in Dockerfile",
+      "matchManagers": ["dockerfile"],
+      "automerge": true
+    },
+    {
+      "description": "Linuxserver.io Base Image Packaging Versioning",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["ghcr.io/linuxserver/baseimage-**"],
+      "versioning": "regex:^((?<compatibility>[a-z0-9.]+)-)?[a-z0-9]+-ls(?<patch>\\d+)$"
+    }
+  ]
+}
