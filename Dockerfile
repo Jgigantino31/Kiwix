@@ -1,3 +1,3 @@
-FROM ghcr.io/linuxserver/baseimage-ubuntu:resolute-39982094-ls25@sha256:d6395fad101bb9cacbe51c89225b3c0bf072f1199c2ddf980e0d2282783dcae6
+FROM ghcr.io/linuxserver/baseimage-ubuntu:resolute-2002c0bc-ls26@sha256:3b5862c04c04d3cf3aed92ac6d4a75e0a36208fd15e2a968563a0c7e11898401
 LABEL org.opencontainers.image.source=https://github.com/Jgigantino31/Kiwix
 RUN apt-get update && apt-get -y install git kiwix-tools nano wget
